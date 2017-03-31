@@ -1,4 +1,4 @@
-Technology stack proposal
+Technology stack
 
 * Languages: JavaScript, HTML, CSS
 * IDE: Eclipse, Atom
@@ -7,18 +7,13 @@ Technology stack proposal
 * Testing Framework: Mocha
 
 ***
+Run the application
 
-Install and init the *Express Framework*
-
-*(PLEASE DO NOT SIMPLY COPY & PASTE THESE COMMANDS. FILES WILL BE OVERWRITTEN AND F&ast;&ast;&ast; UP THE REPOSITORY.)*
-
-* `npm install express-generator -g` (`-g` or `--global` installs the package globally)
-* `npm list -g --depth=0` (list all npm packages to verify correct install)
-* `express --view=pug Pwny-Player` (**pug** builds the folder structure)
-* `cd Pwny-Player && npm install` (modules are installed)
+* *do a git pull first*
+* `npm install -g`
+* (`npm list -g --depth=0` (list all npm packages to verify correct install))
 * `npm start` (go to **localhost:3000** to see the Express welcome page)
 
-Add *Mocha Testing Framework*
-* `npm install mocha -g`
-* `mkdir test`
+***
+Testing with *mocha*
 * `mocha --recursive`
