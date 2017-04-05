@@ -1,7 +1,19 @@
-Technology stack proposal
+Technology stack
 
 * Languages: JavaScript, HTML, CSS
-* IDE: Eclipse
+* IDE: Eclipse, Atom
 * Frameworks: Express (runs on Node.js)
 * Database: SQLite + Sequelize (sequelize-restful) (runs on Node.js)
-* Testingframework: mocha
+* Testing Framework: Mocha
+
+***
+Run the application
+
+* *do a git pull first*
+* `npm install`
+* (`npm list --depth=0` (list all npm packages to verify correct install))
+* `npm start` (go to **localhost:3000** to see the Express welcome page)
+
+***
+Testing with *mocha*
+* `mocha --recursive`
