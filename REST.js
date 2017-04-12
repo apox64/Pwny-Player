@@ -6,7 +6,8 @@ const bodyParser = require('body-parser'),
       express = require('express');
 
 //local modules
-const packageJSON = require('./package');
+const packageJSON = require('./package'),
+      route = require('./route');
 
 module.exports = {
   initREST: function(dbHandle){
@@ -19,85 +20,38 @@ function REST(dbHandle) {
   const app = express();
 
   app.use(cors());
+  app.use(bodyParser.json());
+
+  //GET function middleware
+  //The target URL is saved in req.target
+  app.param('target', function(req, res, next, target) {
+    req.target = target;
+    next();
+  });
+
+  //All function middleware
+  //Used to save information from POST functions in req.target
+  app.use (function (req, res, next) {
+    if(!!req.body.target) {
+      req.target = req.body.target;
+    }
+    next();
+  });
 
   //programm the POST Methods
-  app.post('/music/', (req,res) => {
-    const musicTitle = req.body.musictitle;
+  app.post('/music/', route.musicTitle);
 
-    if(!musicTitle) {
-      //Return empty list to frontend
-      //Or errorhandling
-    } else {
-      //DB call with params: musicTitle
-      //Send data to frontend
-    }
-  });
+  app.post('/stream/', route.stream);
 
-  app.post('/stream/',(req, res) => {
-    const musicTitle = req.body.musicTitle;
-
-    if(!musicTitle) {
-      //Return empty list to frontend
-      //Or errorhandling
-    } else {
-      //DB call with params: musicTitle
-      //Send data to frontend
-    }
-  });
-
-  app.post('/artist/',(req,res) => {
-    const artistName = req.body. artistName;
-
-    if(!artistName) {
-      //Return empty list to frontend
-    } else {
-      //DB call with params: artistName
-      //Send data to frontend
-    }
-  });
+  app.post('/artist/', route.artistName);
 
   //Get Methods
-  app.get('/music/:musicTitle', (req,res) => {
-    const musicTitle = req.params.MusicTitle;
+  app.get('/music/:target', route.musicTitle);
 
-    res.status(200);
+  app.get('/stream/:target', route.stream);
 
-    if(!musicTitle){
-      res.send('');
-      //Return empty list to frontend
-      //Or errorhandling
-    } else {
-      //DB call with params: MusicTitle
-      //Send data to Frontend
-    }
-  });
+  app.get('/artist/:target', route.artistName);
 
-  app.get('/stream/:musicTitle',(req,res) => {
-    const musicTitle = req.params.musicTitle;
-
-    res.status(200);
-
-    if(!musicTitle){
-      //What ever happens when the String is empty
-      //Maybe errorhandling
-    } else {
-      //DB call with params: MusicTitle
-      //Send data to Frontend musicplayer
-    }
-  });
-
-  app.get('/artist/:artistName', (req, res) => {
-    const artistName = req.params.artistName;
-
-    res.status(200);
-
-    if(!artistName){
-      res.send('');
-      //Return empty list to frontend
-    } else {
-      //DB call with params: ArtistName
-      //Send ArtistName to frontend list
-    }
-  });
   return app;
+
 };

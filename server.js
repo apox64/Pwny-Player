@@ -1,5 +1,7 @@
 'use strict'
 
+//TODO: errorhandling
+
 //extern modules
 const http = require('http');
 
