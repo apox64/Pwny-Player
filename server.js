@@ -2,10 +2,11 @@
 
 //TODO: errorhandling
 
-//extern modules
+//external modules
 const http = require('http');
 
 let server = null;
+const port = 3000;
 
 module.exports = {
 
@@ -16,8 +17,8 @@ module.exports = {
 
   startServer: function() {
 
-    server.listen(3000, () => {
-      console.log('Server started...');
+    server.listen(port, () => {
+      console.log('Server listening on port ' + port + ' ...');
     });
   }
 };

@@ -10,10 +10,16 @@ Technology stack
 Run the application
 
 * *do a git pull first*
+* *switch to folder Pwny-Player*
 * `npm install`
 * (`npm list --depth=0` (list all npm packages to verify correct install))
-* `npm start` (go to **localhost:3000** to see the Express welcome page)
+* `node app.js` (go to **localhost:3000** to see the Pwny-Player start page)
 
 ***
 Testing with *mocha*
-* `mocha --recursive`
+* `npm install -g mocha` (-g installs mocha globally)
+* `mocha --ui tdd --recursive`
+
+Reporter Options
+* `--reporter nyan`
+* `--R landing`

@@ -2,11 +2,15 @@
 
 // local modules
 const server = require('./server'),
-      REST = require('./REST'),
+      api = require('./api'),
       db = require('./db');
 
+const packageJson = require('./package');
+
+console.log(`App started: ${packageJson.name} (version: ${packageJson.version}) ...`);
+
 const dbHandle = db.initDB();
-const app = REST.initREST(dbHandle);
+const app = api.initAPI(dbHandle);
 
 server.initServer(app);
 server.startServer();
