@@ -17,5 +17,9 @@
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "serve-favicon": "~2.3.2"
+  },
+  "devDependencies": {
+    "assertthat": "^0.8.5",
+    "supertest": "^3.0.0"
   }
 }
