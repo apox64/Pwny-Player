@@ -1,9 +1,9 @@
 'use strict'
 
 // local modules
-const server = require('./server'),
-      api = require('./api'),
-      db = require('./db');
+const server = require('./lib/server'),
+      api = require('./lib/api'),
+      db = require('./lib/db');
 
 const packageJson = require('./package');
 
