@@ -9,17 +9,28 @@ Technology stack
 ***
 Run the application
 
-* *do a git pull first*
-* *switch to folder Pwny-Player*
-* `npm install`
-* (`npm list --depth=0` (list all npm packages to verify correct install))
-* `node app.js` (go to **localhost:3000** to see the Pwny-Player start page)
+1. `git pull`
+2. `npm install`
+3. `node app.js`
+4. go to [localhost:3000](localhost:3000)
+
+Before committing:
+1. `mocha` should pass all tests
+2. update the version number in `package.json`
 
 ***
-Testing with *mocha*
-* `npm install -g mocha` (-g installs mocha globally)
-* `mocha --ui tdd --recursive`
+Useful commands
+* (`npm list --depth=0` (list all npm packages to verify correct install))
 
-Reporter Options
+***
+*mocha* Reporter Options
+* `mocha --ui tdd --recursive`
 * `--reporter nyan`
-* `--R landing`
+* `--reporter landing`
+
+***
+TODOs:
+1. add webpack.config.js
+2. add .babel.rc
+3. add React
+4. write some more tests

@@ -3,12 +3,10 @@
 const assert = require('assertthat'),
       request = require('supertest');
 
-const api = require('../lib/api'),
-      db = require('../lib/db');
+const api = require('../lib/api');
 
-suite('api', function () {
+suite('Pwny-Player', function () {
       let app;
-      let dbHandle;
 
   suiteSetup(function () {
     // ...
@@ -19,18 +17,27 @@ suite('api', function () {
   });
 
   setup(function () {
-    dbHandle = db.initDB();
-    app = api.initAPI(dbHandle);
+    app = api.initAPI();
   });
 
   teardown(function () {
     app = undefined;
   });
 
-    suite('GET /', function () {
+    suite('Basic 200 OK Tests (Availability)', function () {
         test('returns status code 200.', function (done) {
         request(app).
-            get('/stream/play').
+            get('/').
+            end((err, res) => {
+                assert.that(err).is.null();
+                assert.that(res.statusCode).is.equalTo(200);
+                done();
+            });
+        });
+
+        test('returns status code 200.', function (done) {
+          request(app).
+            get('/songs').
             end((err, res) => {
                 assert.that(err).is.null();
                 assert.that(res.statusCode).is.equalTo(200);
@@ -38,4 +45,9 @@ suite('api', function () {
             });
         });
     });
+
+    suite('Stream Tests', function () {
+      //...
+    });
+
 });
