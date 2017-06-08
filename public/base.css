@@ -1,11 +1,11 @@
 body {
   padding: 30px;
-  text-align: center;
   font-family: sans-serif;
   background-color: #ffffcc
 }
 
-h1 {
+h1, h2 {
+  text-align: center;
   color: #cc33ff;
 }
 
@@ -29,4 +29,25 @@ button:hover {
   border: 5px solid #660066;
   color: #660066;
   border-radius: 25px;
+}
+.hrstyle {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 5px solid #cc33ff;
+  margin: 1em 0;
+  padding: 0;
+}
+
+.musicPlayerBox, .musicListBox{    
+  text-align: center;
+}
+
+.Box{
+  width: 50%;
+  float: left;
+}
+
+.parentMusicList{
+  display: inline-block;
 }
