@@ -30,7 +30,8 @@ Useful commands
 
 ***
 TODOs:
-1. add webpack.config.js
-2. add .babel.rc
-3. add React
-4. write some more tests
+1. write some more tests
+2. fix bugs (splitted line, etc.)
+3. implement play button correctly
+4. do some error handling
+5. (add CraZY D1sc0 m0de!)
