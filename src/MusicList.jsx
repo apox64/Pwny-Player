@@ -13,7 +13,9 @@ class MusicList extends React.Component {
             <MusicItem
               name={musicItem.name}
               url={musicItem.url}
-              genre={musicItem.genre}>
+              genre={musicItem.genre}
+              id={musicItem.id}
+              handleClick={this.props.handleClick}>
             </MusicItem>
           </li>
         )
