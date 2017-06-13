@@ -6,7 +6,7 @@ const Footer = require('./Footer.jsx'),
         Header = require('./Header.jsx'),
         MusicList = require('./MusicList.jsx'),
         MusicPlayer = require('./MusicPlayer.jsx');
-      
+
 
 class Main extends React.Component {
 
@@ -17,12 +17,12 @@ class Main extends React.Component {
     this.state = {musicItem: this.props.musicSongs[Math.floor(Math.random()*this.props.musicSongs.length)]};
     console.log(this.state.musicItem);
   }
- 
+
   handleClick(e) {
     console.log(e.target.id);
     this.setState({musicItem: this.props.musicSongs[e.target.id -1]});
   }
-  
+
   render () {
     return <div>
     <div>
@@ -35,12 +35,12 @@ class Main extends React.Component {
                 <MusicPlayer
                     musicItem={this.state.musicItem}>
                 </MusicPlayer>
-            </div>            
+            </div>
         </div>
         <div className="Box musicListBox">
             <h2>Music List</h2>
             <div className="parentMusicList">
-                <MusicList 
+                <MusicList
                     musicList={this.props.musicSongs}
                     handleClick={this.handleClick}>
                 </MusicList>
@@ -48,7 +48,7 @@ class Main extends React.Component {
         </div>
         <div className="clear">
             <hr className="hrstyle"></hr>
-        </div>        
+        </div>
     </div>
     <div>
         <Footer></Footer>

@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 187);
+/******/ 	return __webpack_require__(__webpack_require__.s = 188);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -9562,8 +9562,8 @@ var React = __webpack_require__(14);
 
 var Footer = __webpack_require__(183),
     Header = __webpack_require__(184),
-    MusicList = __webpack_require__(185),
-    MusicPlayer = __webpack_require__(186);
+    MusicList = __webpack_require__(186),
+    MusicPlayer = __webpack_require__(187);
 
 var Main = function (_React$Component) {
     _inherits(Main, _React$Component);
@@ -22197,7 +22197,13 @@ var Footer = function (_React$Component) {
                         React.createElement(
                             'p',
                             null,
-                            'Autoren: Daniel Mader, Tobias Horn, Patrick Solisch'
+                            '\xA9 2017 Hochschule Esslingen, Web Technologien, Dozent: ',
+                            React.createElement(
+                                'a',
+                                { href: 'https://github.com/goloroden' },
+                                'Golo Roden'
+                            ),
+                            ', Autoren: Daniel Mader, Tobias Horn, Patrick Solisch'
                         )
                     )
                 )
@@ -22228,43 +22234,45 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var React = __webpack_require__(14);
 
 var Header = function (_React$Component) {
-    _inherits(Header, _React$Component);
+  _inherits(Header, _React$Component);
 
-    function Header() {
-        _classCallCheck(this, Header);
+  function Header() {
+    _classCallCheck(this, Header);
 
-        return _possibleConstructorReturn(this, (Header.__proto__ || Object.getPrototypeOf(Header)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (Header.__proto__ || Object.getPrototypeOf(Header)).apply(this, arguments));
+  }
+
+  _createClass(Header, [{
+    key: 'render',
+    value: function render() {
+      return React.createElement(
+        'header',
+        null,
+        React.createElement(
+          'div',
+          null,
+          React.createElement(
+            'div',
+            null,
+            React.createElement(
+              'h1',
+              null,
+              React.createElement('img', { src: '../images/pinkie_pie.png', alt: 'here should be an image', width: '70', height: '70' }),
+              'Pwny Player',
+              React.createElement('img', { src: '../images/apple_jack.png', alt: 'here should be an image', width: '70', height: '70' })
+            )
+          ),
+          React.createElement(
+            'div',
+            null,
+            React.createElement('hr', { className: 'hrstyle' })
+          )
+        )
+      );
     }
+  }]);
 
-    _createClass(Header, [{
-        key: 'render',
-        value: function render() {
-            return React.createElement(
-                'header',
-                null,
-                React.createElement(
-                    'div',
-                    null,
-                    React.createElement(
-                        'div',
-                        null,
-                        React.createElement(
-                            'h1',
-                            null,
-                            'Pwny Player'
-                        )
-                    ),
-                    React.createElement(
-                        'div',
-                        null,
-                        React.createElement('hr', { className: 'hrstyle' })
-                    )
-                )
-            );
-        }
-    }]);
-
-    return Header;
+  return Header;
 }(React.Component);
 
 module.exports = Header;
@@ -22286,7 +22294,49 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 var React = __webpack_require__(14);
 
-var MusicItem = __webpack_require__(188);
+var MusicItem = function (_React$Component) {
+  _inherits(MusicItem, _React$Component);
+
+  function MusicItem() {
+    _classCallCheck(this, MusicItem);
+
+    return _possibleConstructorReturn(this, (MusicItem.__proto__ || Object.getPrototypeOf(MusicItem)).apply(this, arguments));
+  }
+
+  _createClass(MusicItem, [{
+    key: 'render',
+    value: function render() {
+      return React.createElement(
+        'button',
+        { id: this.props.id, className: 'musicItem', onClick: this.props.handleClick },
+        this.props.name
+      );
+    }
+  }]);
+
+  return MusicItem;
+}(React.Component);
+
+module.exports = MusicItem;
+
+/***/ }),
+/* 186 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var React = __webpack_require__(14);
+
+var MusicItem = __webpack_require__(185);
 
 var MusicList = function (_React$Component) {
   _inherits(MusicList, _React$Component);
@@ -22327,7 +22377,7 @@ var MusicList = function (_React$Component) {
 module.exports = MusicList;
 
 /***/ }),
-/* 186 */
+/* 187 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22388,7 +22438,7 @@ var MusicPlayer = function (_React$Component) {
 module.exports = MusicPlayer;
 
 /***/ }),
-/* 187 */
+/* 188 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22409,48 +22459,6 @@ var app = React.createElement(
 );
 
 ReactDOM.render(app, target);
-
-/***/ }),
-/* 188 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var React = __webpack_require__(14);
-
-var MusicItem = function (_React$Component) {
-  _inherits(MusicItem, _React$Component);
-
-  function MusicItem() {
-    _classCallCheck(this, MusicItem);
-
-    return _possibleConstructorReturn(this, (MusicItem.__proto__ || Object.getPrototypeOf(MusicItem)).apply(this, arguments));
-  }
-
-  _createClass(MusicItem, [{
-    key: 'render',
-    value: function render() {
-      return React.createElement(
-        'button',
-        { id: this.props.id, className: 'musicItem', onClick: this.props.handleClick },
-        this.props.name
-      );
-    }
-  }]);
-
-  return MusicItem;
-}(React.Component);
-
-module.exports = MusicItem;
 
 /***/ })
 /******/ ]);

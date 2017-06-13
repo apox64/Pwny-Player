@@ -52,7 +52,7 @@ button:hover {
   padding: 0;
 }
 
-.musicPlayerBox, .musicListBox{    
+.musicPlayerBox, .musicListBox{
   text-align: center;
 }
 
@@ -98,7 +98,7 @@ header{
 }
 
 .clear{
-  clear: both; 
+  clear: both;
 }
 
 .content{

@@ -2,7 +2,7 @@
 
 const React = require('react');
 
-const MusicItem = require('./musicItem.jsx');
+const MusicItem = require('./MusicItem.jsx');
 
 class MusicList extends React.Component {
   render () {

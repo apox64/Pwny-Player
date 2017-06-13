@@ -1,0 +1,114 @@
+html {
+  overflow-y: scroll;
+}
+
+body {
+  padding: 30px;
+  font-family: sans-serif;
+  background-color: #ffccff;
+  margin: 8px;
+}
+
+h1, h2  {
+  text-align: center;
+  color: #cc33ff;
+}
+
+h2  {
+  text-decoration: underline;
+}
+
+p {
+  text-align: center;
+}
+
+img {
+  padding: 10px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+button {
+  background-color: #cc33ff;
+  border: 5px solid #ffccff;
+  border-radius: 15px;
+  color: white;
+  padding: 5px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+button:hover {
+  border: 5px solid #660066;
+  color: #660066;
+  border-radius: 25px;
+}
+.hrstyle {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 5px solid #cc33ff;
+  margin: 0 0;
+  padding: 0;
+}
+
+.musicPlayerBox, .musicListBox{
+  text-align: center;
+}
+
+.Box{
+  width: 50%;
+  float: left;
+}
+
+.parentMusicList{
+  display: inline-block;
+}
+
+.musicList{
+  list-style-type:none;
+  padding-left:0px;
+}
+
+.PlayerImage img{
+  width:auto;
+  height:350px;
+}
+
+footer{
+  background-color: #ffccff;
+  position: fixed;
+  padding: 0px 30px 30px 30px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+header{
+  background-color: #ffccff;
+  position: fixed;
+  padding: 30px 30px 0px 30px;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.clear{
+  clear: both;
+}
+
+.content{
+  margin-top: 80px;
+}

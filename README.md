@@ -31,7 +31,5 @@ Useful commands
 ***
 TODOs:
 1. write some more tests
-2. fix bugs (splitted line, etc.)
-3. implement play button correctly
-4. do some error handling
-5. (add CraZY D1sc0 m0de!)
+2. (add CraZY D1sc0 m0de!)
+3. create a Dockerfile and docker container (deploy)
