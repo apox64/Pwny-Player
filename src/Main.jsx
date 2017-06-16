@@ -13,13 +13,13 @@ class Main extends React.Component {
   constructor(props) {
     super(props);
     this.handleClick = this.handleClick.bind(this);
-    console.log(this.props.musicSongs);
+    //console.log(this.props.musicSongs);
     this.state = {musicItem: this.props.musicSongs[Math.floor(Math.random()*this.props.musicSongs.length)]};
     console.log(this.state.musicItem);
   }
 
   handleClick(e) {
-    console.log(e.target.id);
+    //console.log(e.target.id);
     this.setState({musicItem: this.props.musicSongs[e.target.id -1]});
   }
 
