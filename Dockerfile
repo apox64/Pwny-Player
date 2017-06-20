@@ -1,4 +1,4 @@
-FROM node:7.7.3
+FROM node:boron
 
 # adding /app Folder and copying files in
 WORKDIR /app
