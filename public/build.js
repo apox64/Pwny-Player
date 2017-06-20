@@ -9574,7 +9574,7 @@ var Main = function (_React$Component) {
         var _this = _possibleConstructorReturn(this, (Main.__proto__ || Object.getPrototypeOf(Main)).call(this, props));
 
         _this.handleClick = _this.handleClick.bind(_this);
-        console.log(_this.props.musicSongs);
+        //console.log(this.props.musicSongs);
         _this.state = { musicItem: _this.props.musicSongs[Math.floor(Math.random() * _this.props.musicSongs.length)] };
         console.log(_this.state.musicItem);
         return _this;
@@ -9583,7 +9583,7 @@ var Main = function (_React$Component) {
     _createClass(Main, [{
         key: 'handleClick',
         value: function handleClick(e) {
-            console.log(e.target.id);
+            //console.log(e.target.id);
             this.setState({ musicItem: this.props.musicSongs[e.target.id - 1] });
         }
     }, {
@@ -22420,13 +22420,13 @@ var MusicPlayer = function (_React$Component) {
         ),
         React.createElement(
           'div',
-          { className: 'PlayerImage' },
-          React.createElement('img', { src: '' + this.props.musicItem.pic_url, alt: '' + this.props.musicItem.name })
+          null,
+          React.createElement('audio', { src: '' + this.props.musicItem.url, controls: true })
         ),
         React.createElement(
           'div',
-          null,
-          React.createElement('audio', { src: '' + this.props.musicItem.url, controls: true })
+          { className: 'PlayerImage' },
+          React.createElement('img', { src: '' + this.props.musicItem.pic_url, alt: '' + this.props.musicItem.name })
         )
       );
     }

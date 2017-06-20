@@ -29,6 +29,14 @@ Useful commands
 * `--reporter landing`
 
 ***
+Build a Docker container
+* Switch to the root of the Pwny-Player (where the `Dockerfile` is)
+* `docker build -t pwnyplayer .`
+* `docker images`
+* `docker run --name pwny -p 3000:3000 pwnyplayer` (ohne Konsolenausgabe einfach vor dem -p noch ein `-d` einfügen)
+* `docker stop pwny`
+
+***
 TODOs:
 1. write some more tests
 2. (add CraZY D1sc0 m0de!)
