@@ -3,7 +3,10 @@
   "version": "1.0.2",
   "private": true,
   "scripts": {
-    "start": "webpack && node app.js"
+    "start": "webpack && node app.js",
+    "test": "mocha",
+    "docker-start": "docker run --name pwny -p 3000:3000 pwnyplayer",
+    "docker-stop": "docker stop pwny"
   },
   "dependencies": {
     "body-parser": "1.16.1",
