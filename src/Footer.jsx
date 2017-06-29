@@ -11,8 +11,7 @@ class Footer extends React.Component {
                 </div>
                 <div>
                     <p>
-                        &copy; 2017 Hochschule Esslingen, Web Technologien, Dozent: <a href="https://github.com/goloroden">Golo Roden</a>,
-                        Autoren: Daniel Mader, Tobias Horn, Patrick Solisch
+                        &copy; 2017
                     </p>
                 </div>
             </div>

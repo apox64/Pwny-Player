@@ -40,4 +40,3 @@ Build a Docker container
 TODOs:
 1. write some more tests
 2. (add CraZY D1sc0 m0de!)
-3. create a Dockerfile and docker container (deploy)
